@@ -21,4 +21,5 @@ int main(int argc, char *argv[]) {
     cout << numbers.at(i) << " ";
   }
   cout << "\n";
+  return 0;
 }
