@@ -4,10 +4,11 @@ def printBoard(b):
 
 
 def solve(b, n, k):
-    # First step rotate 90 degrees
     rb = []
     result = ""
+    red, blue = False, False
 
+    # First step rotate 90 degrees
     j = 0
     while j < n:
         i = n - 1
@@ -34,8 +35,8 @@ def solve(b, n, k):
                     l = l - 1
                     m = m - 1
             i -= 1
+
     # Thirty step
-    red, blue = False, False
     ## Rows count
     for i in range(n):
         row = ''.join(rb[i])
@@ -49,7 +50,6 @@ def solve(b, n, k):
         col = ''
         for i in range(n):
             col += rb[i][j]
-        
         if col.count('R'*k) >= 1:
             red = True
         if col.count('B'*k) >= 1:
@@ -61,7 +61,6 @@ def solve(b, n, k):
     dp = ''.join(dp)
     if dp.count('R'*k) >= 1:
         red = True
-    
     if dp.count('B'*k) >= 1:
         blue = True
 
@@ -100,7 +99,6 @@ def solve(b, n, k):
         j = j - 1
         i = i + 1
     ds = ''.join([rb[i][j] for i, j in idp])
-
     if ds.count('R'*k) >= 1:
         red = True
     if ds.count('B'*k) >= 1:
