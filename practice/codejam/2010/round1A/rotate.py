@@ -36,7 +36,7 @@ def solve(b, n, k):
                     m = m - 1
             i -= 1
 
-    # Thirty step
+    # Thirty step count
     ## Rows count
     for i in range(n):
         row = ''.join(rb[i])
